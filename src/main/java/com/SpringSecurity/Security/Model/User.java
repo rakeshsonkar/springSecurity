@@ -1,11 +1,25 @@
 package com.SpringSecurity.Security.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="user")
 public class User {
+	@Id
 	String username;
 	String password;
 	String email;
+	String role;
 	public String getUsername() {
 		return username;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
 	}
 	public void setUsername(String username) {
 		this.username = username;
